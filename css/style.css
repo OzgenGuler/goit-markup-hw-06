@@ -723,3 +723,223 @@ border-color: #4D5AE5;
    margin-bottom: 24px;
   
 }
+
+/*Tablet*/
+
+@media (min-width:768px) and (max-width:1158px){
+  .container{
+      width: 100%;
+  }
+
+  .pgs-header .logo-one{
+      margin-right:120px;
+  }
+
+  /*adres*/
+  .contact{
+    margin: 0;
+    margin-left: 122px;
+    margin-right: 16px;
+  }
+
+  .list-contact{
+    flex-direction: column;
+    gap:0;
+  }
+
+  .list-contact .list-contact__item{
+    padding-top: 8px;
+    padding-bottom: 0px;
+  }
+
+  .list-contact .list-contact__item .link{
+    font-size: 12px;
+  }
+
+  /*ücüncü section */
+  .third .container{
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+  
+  .third .third__list{
+    column-gap: 24px;
+    row-gap: 64px;
+    justify-content: center;
+  }
+
+  .third .third__list .list-item{
+    min-width: 264px;
+  }
+
+  /*ikinci section*/
+  .second .second-list{
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+   
+  .second .second-list .second-list_items{
+    min-width: 356px;
+  }
+
+  .second .second-list .second-list_items .second__list-title{
+    font-size: 36px;
+  }
+
+  /*dördüncü section*/
+  .forth .forth__list{
+    margin: auto;
+    justify-content: center;
+  }
+
+  .forth .forth__list .list-items{
+    min-width: 356px;
+  }
+
+  /*fooooterrrr*/
+  .footer .container{
+    margin:0;
+    flex-wrap: wrap;
+    padding-left: 108px;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .footer .container .subcontainer{
+    margin: 0;
+  }
+
+  .footer .container .subscribe-container{
+    margin: 0;
+  }
+
+  .second .container .second-list .second-list_items .icons_container{
+    display: none;
+  }
+
+}
+
+
+/*Telefon*/
+
+@media (min-width:320px) and (max-width:767px){
+
+  .container{
+    width: 100%;
+  }
+
+  .contact{
+    margin-left: 0;
+  }
+  
+  /*ikinci section*/
+
+  .second.container{
+    padding: 0 16px;
+  }
+
+  .second .second-list{
+    flex-direction: column;
+    justify-content: center;
+    gap:72px;
+  }
+
+  .second .second-list .second-list_items{
+    min-width: 100%;
+  }
+
+  .second .second-list .second-list_items .icons_container{
+    display: none;
+  }
+
+  .second .second-list .second-list_items .second__list-title{
+    text-align: center;
+    font-size: 36px;
+  }
+
+  /*ücüncü section*/
+
+  .third .container{
+    padding: 0;
+  }
+
+  .third .third__list{
+    flex-direction: column;
+    gap: 72px;
+    justify-content: center;
+  }
+
+  .third.third__list .list-item{
+    min-width: 100%;
+  }
+
+  /*dördüncü section*/
+
+  .forth .container{
+    padding: 0 16px;
+  }
+
+  .forth .forth__list {
+    flex-direction: column;
+    gap: 48px;
+    justify-content: center;
+  }
+
+  .forth .forth__list .list-items{
+    min-width: 100%;
+  }
+
+  .forth .forth__list .list-items .img-container{
+    width: 100%
+  }
+
+  /*foooterr*/
+
+  .footer .container{
+    flex-direction: column;
+    gap: 72px;
+    align-items: center;
+    padding: 0 16px;
+  }
+
+  .footer .container .subcontainer,
+  .footer .container .social-container{
+    margin: 0;
+    text-align: center;
+  }
+
+  .footer .container .subcontainer .footerlogo{
+    margin: 0 0 17.5px 0;
+  }
+
+  .footer .container .subscribe-container{
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    min-width: 100%;
+  }
+ 
+  .footer .container .subscribe-container .subscribe-txt {
+    margin: 0;
+  }
+
+  .footer .container .subscribe-container .form-subscribe{
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .footer .container .subscribe-container .form-subscribe .subscribe-input{
+    width: 100%;
+  }
+
+  .footer .container .subscribe-container .btn_form{
+    width: 117px;
+  }
+
+}
