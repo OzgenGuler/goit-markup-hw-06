@@ -10,10 +10,14 @@ body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 img {
   display: block;
+  width: 100%;
 }
 
 ul {
@@ -538,6 +542,7 @@ a {
 }
 
 .windows-modal {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -738,8 +743,8 @@ border-color: #4D5AE5;
   /*adres*/
   .contact{
     margin: 0;
-    margin-left: 122px;
-    margin-right: 16px;
+   /* margin-left: 122px;
+    margin-right: 16px;*/
   }
 
   .list-contact{
