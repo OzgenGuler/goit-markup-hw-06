@@ -972,7 +972,7 @@ border-color: #4D5AE5;
     display: block;
     width: 24px;
     height: 24px;
-    padding: 5px;
+    padding: 0;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -1028,7 +1028,6 @@ border-color: #4D5AE5;
 
   .menu-mobil .modal-container .list-nav{
     flex-direction: column;
-    gap: 40px;
   }
 
   .menu-mobil .modal-container .list-nav .list-nav__list-item{
