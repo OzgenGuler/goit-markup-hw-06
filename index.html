@@ -49,6 +49,16 @@
         </ul>
       </address>
     </div>
+    <button
+          type="button"
+          class="menu-mobil-btn"
+          onclick="document.getElementById('menu-mobil').style.display='block'"
+        >
+          <svg width="24" height="24" class="icon-solid_menu">
+            <use href="./images/icons.svg#icon-solid_menu"></use>
+          </svg>
+        </button>
+      </div>
   </header>
   <main>
     <section class="first" id="onepuch">
@@ -411,10 +421,7 @@
         <p class="subscribe-txt">Subscribe</p>
         <form class="form-subscribe">
           <label for="email-subscribe" class="email-subscribe-label">
-            <input type="email" 
-              name="email-subscribe" 
-              id="email-subscribe" 
-              placeholder="E-mail"
+            <input type="email" name="email-subscribe" id="email-subscribe" placeholder="E-mail"
               class="subscribe-input" />
           </label>
           <button class="btn_form" type="submit">
@@ -465,13 +472,11 @@
         </div>
         <div class="modal-label modal-label-textera">
           <label for="user-comment" class="label-modal">Comment</label>
-          <textarea id="user-comment" name="user-comment" 
-          placeholder="Text input" 
-          class="label-textera"></textarea>
+          <textarea id="user-comment" name="user-comment" placeholder="Text input" class="label-textera"></textarea>
         </div>
         <div class="modal-label modal-label-checkbox">
-          <input type="checkbox" name="user-privacy" id="user-privacy"
-          value="true" class="label-checkbox visually-hidden"/>   
+          <input type="checkbox" name="user-privacy" id="user-privacy" value="true"
+            class="label-checkbox visually-hidden" />
           <label for="user-privacy" class="label-modal">
             <span class="icon-modal-onaybox" id="icon-modal-checkbox">
               <svg class="icon-modal-box" width="10" height="8">
@@ -480,10 +485,74 @@
             </span>
             I accept the terms and conditions of the&nbsp;
             <a href="#" class="label-link">Privacy Policy</a>
-          </label>          
+          </label>
         </div>
-        <button class="modal-buton" >Send</button>
+        <button class="modal-buton">Send</button>
       </form>
+    </div>
+  </div>
+  <div class="menu-mobil" id="menu-mobil">
+    <button type="button" class="icon-close-btn" onclick="document.getElementById('menu-mobil').style.display='none'">
+      <svg class="icon-close-btn" width="8" height="8">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <div class="modal-container">
+      <nav class="hdr-nav">
+        <ul class="list-nav">
+          <li class="list-nav__list-item">
+            <a class="link" href="./index.html">Studio</a>
+          </li>
+          <li class="list-nav__list-item">
+            <a class="link" href="">Portfolio</a>
+          </li>
+          <li class="list-nav__list-item">
+            <a class="link" href="">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <address class="contact" id="contact">
+        <ul class="list-contact">
+          <li class="list-contact__item">
+            <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li class="list-contact__item">
+            <a class="link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+          </li>
+        </ul>
+        <div class="social-container">
+          <ul class="social-list">
+            <li class="sociallist-item">
+              <a href="#" class="social-link">
+                <svg class="social-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="sociallist-item">
+              <a href="#" class="social-link">
+                <svg class="social-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="sociallist-item">
+              <a href="#" class="social-link">
+                <svg class="social-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="sociallist-item">
+              <a href="#" class="social-link">
+                <svg class="social-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </address>
     </div>
   </div>
 </body>

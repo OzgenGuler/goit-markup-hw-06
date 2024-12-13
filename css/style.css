@@ -34,6 +34,7 @@ a {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   display: flex;
+  box-sizing: border-box;
 }
 
 .hdr-container {
@@ -210,7 +211,6 @@ a {
 
 .second-list_items {
   width: calc((100%-72px) / 4);
-  flex-basis: calc((100%-72px) / 4);
 }
 
 .second__list-title {
@@ -265,7 +265,7 @@ a {
 .third__list .list-item {
   background-color: #ffffff;
   width: calc((100%-72px) / 4);
-  flex-basis: calc((100%-72px) / 4);
+  flex-basis: calc((100%-24px) / 4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -729,11 +729,25 @@ border-color: #4D5AE5;
   
 }
 
+.visually-hidden{
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menu-mobil-btn{
+  display: none;
+}
+
+.menu-mobil{
+  display: none;
+}
+
 /*Tablet*/
 
 @media (min-width:768px) and (max-width:1158px){
   .container{
       width: 100%;
+      max-width: 1157;
   }
 
   .pgs-header .logo-one{
@@ -742,9 +756,7 @@ border-color: #4D5AE5;
 
   /*adres*/
   .contact{
-    margin: 0;
-   /* margin-left: 122px;
-    margin-right: 16px;*/
+    margin-left: 122px;
   }
 
   .list-contact{
@@ -771,26 +783,34 @@ border-color: #4D5AE5;
     column-gap: 24px;
     row-gap: 64px;
     justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+
   }
 
   .third .third__list .list-item{
-    min-width: 264px;
+    width: 264px;
   }
 
   /*ikinci section*/
+  .second .container .second-list .second-list_items .icons_container{
+    display: none;
+  }
   .second .second-list{
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
     column-gap: 24px;
     row-gap: 72px;
+    display: flex;
+    flex-wrap: wrap;
   }
    
   .second .second-list .second-list_items{
-    min-width: 356px;
+   width: 356px;
   }
 
-  .second .second-list .second-list_items .second__list-title{
+  .second .second__list-title{
     font-size: 36px;
   }
 
@@ -830,7 +850,7 @@ border-color: #4D5AE5;
 
 /*Telefon*/
 
-@media (min-width:320px) and (max-width:767px){
+@media (max-width:767px){
 
   .container{
     width: 100%;
@@ -947,4 +967,134 @@ border-color: #4D5AE5;
     width: 117px;
   }
 
+  .pgs-header .hdr-container .menu-mobil-btn{
+    display: block;
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .pgs-header .hdr-container .menu-mobil-btn:hover + .menu-mobil-btn .icon-solid_menu{
+    fill: #4D5AE5;
+  }
+
+  .pgs-header{
+    position: static;
+    top: 0;
+    left: 0;
+    background-color: #F4F4FD;
+    box-sizing: border-box;
+  }
+
+  .pgs-header .hdr-nav .list-nav{
+    display: none;
+  }
+
+  .pgs-header .contact{
+    display: none;
+  }
+
+  .pgs-header .hdr-container{
+    display: flex;
+    flex-direction: row;
+    padding: 24px 16px;
+  }
+
+  .pgs-header .hdr-container .hdr-nav{
+    align-items: center;
+  }
+
+  .menu-mobil{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .menu-mobil .modal-container{
+    margin: 72px 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 168px;
+  }
+
+  .menu-mobil .modal-container .list-nav{
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .menu-mobil .modal-container .list-nav .list-nav__list-item{
+    padding: 0;
+  }
+
+  .list-nav .list-nav__list-item:nth-of-type(1) .link::after{
+    height: 0;
+  }
+
+  .menu-mobil .modal-container .list-nav .list-nav__list-item .link{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+  }
+
+  .menu-mobil .modal-container .contact{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .menu-mobil .modal-container .contact .list-contact__item{
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .menu-mobil .modal-container .contact .list-contact .list-contact__item{
+    padding: 0;
+  }
+
+  .menu-mobil .modal-container .contact .list-contact .list-contact__item .link{
+    font-size: 20px;
+  }
+
+  .menu-mobil .modal-container .contact .list-contact .list-contact__item:nth-child(2) .link{
+    color: #4D5AE5;
+  }
+
+  .menu-mobil .modal-container .contact .social-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .menu-mobil .modal-container .social-container .social-list .sociallist-item{
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-mobil .modal-container .social-container .social-list .sociallist-item:hover .social-link{
+    background-color: #404bbf;
+  }
+
+  .menu-mobil .modal-container .social-container .social-list .sociallist-item:hover .social-link{
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4,0,0.2,1);
+  }
+
+
+
 }
+
